@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text_summarize</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 900px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        textarea {
+            font-size: 16px;
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            resize: vertical; 
+        }
+        button {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>text_summarize</h1>
+    <form action="/summarize" method="post">
+        <label for="textArea">Enter Text:</label>
+        <textarea id="textArea" name="userText" rows="10" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+</html>
+

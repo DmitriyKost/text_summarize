@@ -7,10 +7,10 @@ import (
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hello from backend")
+    renderTemplate(w, "index.html", nil)
 }
 
-func ReceiveText(w http.ResponseWriter, r *http.Request) {
+func Summarize(w http.ResponseWriter, r *http.Request) {
     if r.Method != http.MethodPost {
         http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
         return

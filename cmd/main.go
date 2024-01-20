@@ -7,5 +7,6 @@ import (
 
 func main() {
     http.HandleFunc("/", pkg.Index)
+    http.HandleFunc("/summarize", pkg.Summarize)
     http.ListenAndServe(":8080", nil)
 }
