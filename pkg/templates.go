@@ -6,7 +6,7 @@ import (
 )
 
 
-var templates = template.Must(template.ParseGlob("*.html"))
+var templates = template.Must(template.ParseGlob("static/*.html"))
 
 func renderTemplate(w http.ResponseWriter, tmpl string, data any) {
     err := templates.ExecuteTemplate(w, tmpl, data)
